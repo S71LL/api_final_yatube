@@ -1,4 +1,8 @@
-### Как запустить проект:
+# API для сайта с постами
+
+### API позволяет получать из базы данных записи о постах, группах, подписках и комментариях, сделанных пользователями
+
+## Как запустить проект:
 
 Клонировать репозиторий и перейти в него в командной строке:
 
@@ -13,23 +17,16 @@ cd api_final_yatube
 Cоздать и активировать виртуальное окружение:
 
 ```
-python3 -m venv env
+python -m venv env
+```
+```
+source env/scripts/activate
 ```
 
-* Если у вас Linux/macOS
-
-    ```
-    source env/bin/activate
-    ```
-
-* Если у вас windows
-
-    ```
-    source env/scripts/activate
-    ```
+Установить и обновить менеджер пакетов:
 
 ```
-python3 -m pip install --upgrade pip
+python -m pip install --upgrade pip
 ```
 
 Установить зависимости из файла requirements.txt:
@@ -38,20 +35,26 @@ python3 -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+Перейти в дерикторию с файлом manage.py
+
+```
+cd yatube_api
+```
+
 Выполнить миграции:
 
 ```
-python3 manage.py migrate
+python manage.py migrate
 ```
 
 Запустить проект:
 
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
 
 Проект доступен локально
-## http://127.0.0.1:8000/
+## http://127.0.0.1:8000/api/v1/
 
 Документация проекта
 ## http://127.0.0.1:8000/redoc/
